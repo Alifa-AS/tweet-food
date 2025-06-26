@@ -1,6 +1,12 @@
-import {Poppins, Lobster_Two} from "next/font/google";
+import {Rancho, Poppins, Lobster_Two} from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
+
+const rancho = Rancho({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,14 +26,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${Poppins.className}`}
-      >
-        <nav className={lobster.className}>
-          <ul>
-            <li>Home</li>
-          </ul>
-        </nav>
+      <body className={`${poppins.className}`}>
+        <Navbar />
         {children}
       </body>
     </html>
