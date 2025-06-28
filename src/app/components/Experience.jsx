@@ -54,7 +54,7 @@ const Experience = () => {
   className="max-w-7xl mx-auto text-white rounded-3xl py-20 px-8 shadow-xl relative overflow-hidden bg-cover bg-top"
   style={{ backgroundImage: "url('/Rectangle.png')" }}
 >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-center relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-center relative z-10 pt-10">
           <div className="flex flex-col items-center">
             <span className="text-5xl font-bold mb-2">
               <CountUp end={100} duration={2} />+
