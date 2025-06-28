@@ -15,7 +15,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-export default function App() {
+export default function Page() {
   const [user, setUser] = useState({
     name: "Mark Jecno",
     email: "mark-jecno@gmail.com",
@@ -28,7 +28,6 @@ export default function App() {
     confirm: "",
   });
 
-  // State to manage active navigation item for styling
   const [activeNavItem, setActiveNavItem] = useState("Profile");
 
   const handleChange = (e) => {
@@ -70,7 +69,7 @@ export default function App() {
         {/* Left Sidebar */}
         <div className="w-full md:w-1/3 flex flex-col relative">
           <div className="flex flex-col items-center pt-30 py-4 px-6 bg-gradient-to-b from-[#FFD3B0] to-[#FF8D2F] text-white rounded-tl-xl rounded-tr-xl md:rounded-tr-none md:rounded-bl-none pb-16">
-            {" "}
+            {/* Optional header */}
           </div>
           {/* profile image */}
           <img
@@ -80,7 +79,6 @@ export default function App() {
           />
 
           <div className="flex-grow bg-white p-6 rounded-bl-xl rounded-br-xl md:rounded-br-none md:rounded-tr-none border-t border-gray-100 pt-10">
-            {" "}
             <div className="text-center text-gray-900 pb-8">
               <h2 className="text-2xl font-semibold mb-1 mt-10">{user.name}</h2>
               <p className="text-sm">{user.email}</p>
@@ -92,8 +90,8 @@ export default function App() {
                   href="#"
                   className={`flex items-center justify-between p-3 rounded-lg transition-colors duration-200 ${
                     activeNavItem === item.name
-                      ? "bg-orange-100 text-orange-600 shadow-sm" 
-                      : "text-gray-600 hover:bg-gray-50 hover:text-orange-600" 
+                      ? "bg-orange-100 text-orange-600 shadow-sm"
+                      : "text-gray-600 hover:bg-gray-50 hover:text-orange-600"
                   }`}
                   onClick={() => setActiveNavItem(item.name)}
                 >
@@ -103,7 +101,7 @@ export default function App() {
                       className={
                         activeNavItem === item.name
                           ? "text-orange-600"
-                          : "text-gray-500" 
+                          : "text-gray-500"
                       }
                     />
                     <span className="font-medium">{item.name}</span>
@@ -124,9 +122,7 @@ export default function App() {
             onSubmit={handleProfileSubmit}
             className="bg-white p-6 rounded-lg shadow-md border border-gray-100"
           >
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">
-              Profile
-            </h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Profile</h3>
 
             {/* Name Input */}
             <div className="relative mb-6">
@@ -177,7 +173,6 @@ export default function App() {
             </div>
 
             <div className="flex justify-end">
-              {" "}
               <button
                 type="submit"
                 className="bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300 transform hover:scale-105 shadow-md w-fit"
@@ -245,7 +240,6 @@ export default function App() {
             </div>
 
             <div className="flex justify-end">
-              {" "}
               <button
                 type="submit"
                 className="bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors duration-300 transform hover:scale-105 shadow-md w-fit"
