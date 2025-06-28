@@ -1,6 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { Rancho } from "next/font/google";
+
+const rancho = Rancho({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const categories = [
   { name: "Donuts", src: "/category/1.png", bgColor: "bg-[#964B00]" }, 
@@ -49,16 +55,16 @@ export default function App() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 opacity-75 z-0"></div>
 
-      <div className="relative z-10"> {/* Ensure content is above background gradient */}
-        <p className="text-gray-600 mb-2 font-semibold">Category</p>
+      <div className="relative z-10"> 
+        <p className={`text-gray-600 mb-2 font-semibold  ${rancho.className}`}>Category</p>
         <h2 className="text-3xl font-bold text-gray-800 mb-8">
           Popular <span className="text-orange-600">Category</span>
         </h2>
 
-        {/* New relative flex container for carousel and arrows to center them */}
+        
         <div className="relative flex items-center">
           {/* Left Arrow */}
           <button
@@ -66,7 +72,7 @@ export default function App() {
             className="absolute -left-4 sm:-left-8 z-20 bg-white text-orange-600 w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-orange-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
             aria-label="scroll left"
           >
-            {/* Replaced FaChevronLeft with inline SVG */}
+            
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
@@ -87,7 +93,6 @@ export default function App() {
                   src={category.src}
                   alt={category.name}
                   className="w-32 h-24 object-cover mb-2"
-                  // Fallback for image loading errors
                   onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/100x100/cccccc/000000?text=Error"; }}
                 />
                 {/* Category Name*/}
@@ -101,11 +106,9 @@ export default function App() {
           {/* Right Arrow */}
           <button
             onClick={scrollRight}
-            // Positioned absolutely within this flex container, slightly overlapping the carousel
             className="absolute -right-4 sm:-right-8 z-20 bg-white text-orange-600 w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:bg-orange-100 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
             aria-label="scroll right"
           >
-            {/* Replaced FaChevronRight with inline SVG */}
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
             </svg>

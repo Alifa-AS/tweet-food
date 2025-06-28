@@ -3,16 +3,25 @@
 import Image from "next/image";
 import React from "react";
 import CountUp from "react-countup";
+import { Rancho } from "next/font/google";
+
+const rancho = Rancho({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const Experience = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8">
+    <section className="max-w-7xl mx-auto px-8 py-20">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left: Text + Download Buttons */}
         <div className="lg:w-1/2 w-full text-center lg:text-left">
-          <p className="text-sm font-semibold text-gray-600 mb-2">
+          <p
+            className={`text-gray-600 mb-2 font-semibold  ${rancho.className}`}
+          >
             Restaurants
           </p>
+          
           <h2 className="text-4xl font-bold text-gray-800 leading-tight mb-6">
             Enhance your experience, <br /> Download the{" "}
             <span className="text-orange-500">Tweet</span> app today!
@@ -50,10 +59,10 @@ const Experience = () => {
       </div>
 
       {/* Bottom Stats */}
-     <div
-  className="max-w-7xl mx-auto text-white rounded-3xl py-20 px-8 shadow-xl relative overflow-hidden bg-cover bg-top"
-  style={{ backgroundImage: "url('/Rectangle.png')" }}
->
+      <div
+        className="max-w-7xl mx-auto text-white rounded-3xl py-20 px-8 shadow-xl relative overflow-hidden bg-cover bg-top"
+        style={{ backgroundImage: "url('/Rectangle.png')" }}
+      >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-center relative z-10 pt-10">
           <div className="flex flex-col items-center">
             <span className="text-5xl font-bold mb-2">
