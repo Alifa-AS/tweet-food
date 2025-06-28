@@ -9,7 +9,7 @@ const testimonials = [
       "Love the convenience of Tweet! Fast, reliable, and super easy to use for all your food delivery cravings.",
     name: "Leon Fischer",
     title: "Satisfied Customer",
-    image: "https://placehold.co/60x60/FFDDC1/E67E22?text=LF",
+    image: "https://i.ibb.co/Tq11WKVY/d5edd9ec40f611b2e9accf040d69d8b1c923008c.jpg",
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const testimonials = [
   {
     id: 3,
     quote:
-      "The best food delivery app out there. User-friendly interface and a wide variety of restaurants to choose from.",
+      "The best food delivery app out there. User-friendly interface, wide variety of restaurants to choose from.",
     name: "John Doe",
     title: "Regular Customer",
     image: "https://placehold.co/60x60/DDC1FF/7E22E6?text=JD",
@@ -56,10 +56,10 @@ const Testimonial = () => {
   const currentTestimonial = testimonials[currentTestimonialIndex];
 
   return (
-    <section className="py-16 px-4 font-inter">
+    <section className="py-16 lg:px-20 px-8 font-inter">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         {/* Left Section: Testimonial Content */}
-        <div className="lg:w-1/2 w-full text-center lg:text-left relative">
+        <div className="lg:w-1/2 px-4 w-full text-center lg:text-left relative">
           <p className="text-sm font-semibold text-gray-600 mb-2">Testimonial</p>
           <h2 className="text-4xl font-bold text-gray-800 leading-tight mb-8">
             What Customer <span className="text-orange-500">Saying</span> <br />{" "}
@@ -68,7 +68,7 @@ const Testimonial = () => {
 
           <div className="relative overflow-visible">
             {/* Navigation Arrows */}
-            <div className="absolute inset-y-0 -left-12 -right-12 flex justify-between items-center z-10">
+            <div className="absolute inset-y-0 -left-12 -right-2 flex justify-between items-center z-10">
               <button
                 onClick={goToPrevious}
                 className="bg-white p-2 rounded-full shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -112,7 +112,7 @@ const Testimonial = () => {
             </div>
 
             {/* Testimonial Card */}
-            <div className="bg-white shadow-xl rounded-2xl p-8 max-w-lg mx-auto lg:mx-0 overflow-hidden transition-opacity duration-500 ease-in-out">
+            <div className=" bg-[#FDF0E9] border border-[#FFCABB] shadow-xl rounded-2xl p-8 max-w-md mx-auto lg:mx-0 overflow-hidden transition-opacity duration-500 ease-in-out">
               <span className="absolute top-2 left-4 text-6xl text-orange-400 opacity-60">
                 “
               </span>

@@ -15,7 +15,7 @@ const foodData = [
     discount: "30% OFF",
     time: "20 min",
     rating: "4.6 (65)",
-    img: "/burger.jpg",
+    img: "/food/f1.jpg",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const foodData = [
     discount: "30% OFF",
     time: "20 min",
     rating: "4.6 (65)",
-    img: "/tandoori.jpg",
+    img: "/food/f2.jpg",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const foodData = [
     discount: "30% OFF",
     time: "30 min",
     rating: "4.6 (65)",
-    img: "/kebab.jpg",
+    img: "/food/f3.jpg",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const foodData = [
     discount: "30% OFF",
     time: "20 min",
     rating: "4.6 (65)",
-    img: "/pizza.jpg",
+    img: "/food/f4.jpg",
   },
 ];
 
@@ -83,7 +83,7 @@ const PopularFood = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl font-semibold text-black">
           Popular <span className="text-orange-500">Food Near me</span>
         </h2>
         <button className="border border-orange-400 px-4 py-1 rounded text-orange-500 hover:bg-orange-400 hover:text-white transition">
