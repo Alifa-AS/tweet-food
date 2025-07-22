@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function RootLayout({ children }) {
+export default function ProfileLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="font-['poppins'] bg-[#fdf0e9] min-h-screen">
+      <div className="font-['poppins'] bg-[#fdf0e9] min-h-screen">
         
-        {children}
-      </body>
-    </html>
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          {children}
+        </div>
+      </div>
   );
 }
